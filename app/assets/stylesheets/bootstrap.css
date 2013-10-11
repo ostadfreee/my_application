@@ -1029,7 +1029,7 @@ form {
 }
 
 fieldset {
-  padding: 0;
+  padding:0; 
   margin: 0;
   border: 0;
 }
@@ -6165,3 +6165,5 @@ a.badge:focus {
 .affix {
   position: fixed;
 }
+
+
