@@ -7,11 +7,21 @@
             <div class="container">
               <ul class="nav">
                 <li class="active"> <%= link_to "Home", root_path%></li>
-                <li><%= link_to "Projects", projects_path%></li>
+                <li><%= link_to "Projects", index_path%></li>
                 <li><%= link_to "Services", services_path%></li>
                 <li><%= link_to "Downloads", downloads_path%></li>
                 <li><%= link_to "About", about_path%></li>
                 <li><%= link_to "Contact", contact_path%></li>
+                <% if authen_signed_in? %>
+  <li>
+  <%= link_to('Logout', destroy_authen_session_path, :method => :delete) %>        
+  </li>
+<% else %>
+  <li>
+  <%= link_to('Login', new_authen_session_path)  %>  
+  </li>
+<% end %>
+
               </ul>
                  
               
@@ -19,12 +29,7 @@
           </div>
         </div><!-- /.navbar -->
       </div>
-
-      <!-- Jumbotron -->
-      <div class="jumbotron">
-        <h1>:Rails => Ruby </h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <a class="btn btn-large btn-success" href="http://getbootstrap.com/2.3.2/examples/justified-nav.html#">Get started today</a>
-      </div>
+ 
+      
 
       

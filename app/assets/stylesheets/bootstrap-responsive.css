@@ -857,7 +857,7 @@
   .row-fluid [class*="offset"]:first-child {
     margin-left: 0;
   }
-  .input-large,
+  .input-medium,
   .input-xlarge,
   .input-xxlarge,
   input[class*="span"],

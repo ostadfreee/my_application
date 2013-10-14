@@ -1,11 +1,17 @@
 MyApplication::Application.routes.draw do
+  devise_for :authens
+  resources :products
+
   root  'static_pages#home'
-  match '/projects',   to: 'static_pages#projects',   via: 'get'
+  match '/products',   to: 'static_pages#projects',   via: 'get'
   match '/services',   to: 'static_pages#services',   via: 'get'
   match '/downloads',   to: 'static_pages#downloads',   via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/contact',   to: 'static_pages#contact',   via: 'post'
   match '/contact',   to: 'static_pages#contact',   via: 'get'
+  match '/login',   to: 'static_pages#login',   via: 'get'
+  match '/index' , to: 'stores#index', via: 'get'
+  match '/show/:id', to: 'stores#show', via: 'get', :as=> 'show'
 
 
 

@@ -1,11 +1,14 @@
 class StaticPagesController < ApplicationController
-  
+
   def home
-    @users = User.all
+    
+    
   end
 
   def projects
-  end
+    
+   
+    end
 
   def services
   end
@@ -22,6 +25,8 @@ class StaticPagesController < ApplicationController
     @message = params[:message]
     @selected_type = params[:type]
     @types = %w(Html Plain)
+  end
+  def login
   end
   
 end
