@@ -10,6 +10,7 @@ gem 'devise'
 gem 'tinymce-rails'
 gem "paperclip", "~> 3.0"
 gem 'pony'
+gem 'twitter-bootstrap-rails'
 
 group :development, :test do
   gem 'rspec-rails', '2.13.1'
