@@ -23,7 +23,51 @@
   <strong>Image:</strong>
   <%= image_tag @product.image %>
 </p>
+<strong><%= "Average:" + @product.reviews.average(:rating).to_s %> <br> </strong>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+<%= link_to 'Back', products_path %> <br/>
+<div class="btn">
+        <div class = "span6">
+<% @product.reviews.each do | review | %>
+  <p><%= "Title:" + review.title %> <br/><p/>
+  <p><%= "Auther:" +review.auther %> <br/><p/>
+  <p><%= "Content:" +review.content %> <br/><p/>
+  <p><%= "Rating:" + review.rating.to_s%> <br/><p/>
+  <p><%= time_ago_in_words(review.created_at)%> ago<p/>
+  <%= link_to 'Remove', product_review_path(review.product, review), :confirm => "Really delete that?", :method => :delete%>
+  <% end %>
+  <%= form_for([@product, @product.reviews.build]) do |f| %>
+  
+    
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :auther %><br>
+    <%= f.text_field :auther %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br>
+    <%= f.text_area :content %>
+  </div>
+  <div class="field">
+    <%= f.label :rating %><br>
+    <%= f.number_field :rating %>
+  </div>
+   <div class="field">
+    <%= f.label :avatar %><br>
+    <%= f.file_field :avatar %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+  <div/>
+  <div/>
+  
+
+
 

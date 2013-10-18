@@ -7,6 +7,9 @@ gem 'pg', '0.15.1'
 gem 'faker'
 gem 'will_paginate', '~> 3.0'
 gem 'devise'
+gem 'tinymce-rails'
+gem "paperclip", "~> 3.0"
+gem 'pony'
 
 group :development, :test do
   gem 'rspec-rails', '2.13.1'

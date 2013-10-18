@@ -20,12 +20,13 @@
       <%#= radio_button_tag :yes, :no %> 
 
       <%= submit_tag "Submit", class: "btn btn-large btn-primary" %>
+      <%= link_to  "Send Email", email_contact_path %>
       <%end%>
     </div>
     <div class = "span3">
        <h4> Parmas: </h4>
     	<p> These params come back to view "contact" page form controller "contact". </p> </br>
-    	<%#= "Name :" + @name.to_s %></br>
+    	<%= "Name :" + @name.to_s %></br>
     	<%#= "Email :" + @email.to_s %></br>
     	<%#= "Message :" + @message.to_s %></br>
     	<%#= "Type :" + @selected_type.to_s%> 

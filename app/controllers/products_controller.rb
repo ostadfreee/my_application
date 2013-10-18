@@ -2,7 +2,11 @@ class ProductsController < ApplicationController
   before_filter :authenticate_authen!
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   
+  def email_product
+    ProductMailer.send_product(params[:id]).deliver
+    redirect_to products_url
 
+  end
   # GET /products
   # GET /products.json
   def index
