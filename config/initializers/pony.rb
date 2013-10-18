@@ -8,6 +8,6 @@ Pony.options = {
     :user_name            => 'ostadfree',
     :password             => 'freekhan123',
     :authentication       => :plain, # :plain, :login, :cram_md5, no auth by default
-    #:domain               => "localhost.localdomain" # the HELO domain provided by the client to the server
+    :domain               => "http://warm-caverns-6097.herokuapp.com" # the HELO domain provided by the client to the server
   }
 }
