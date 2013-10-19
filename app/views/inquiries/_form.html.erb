@@ -6,7 +6,7 @@
       <% end %>
     </ul>
   <% end %>
-  <div class= "span4 offset6">
+  
   <div style="display: none;">
     <%= f.label :nickname %><br/>
     <%= f.text_field :nickname %>
@@ -14,7 +14,7 @@
   
   <div>
     <%= f.label :name %><br/>
-    <%= f.text_field :name%>
+    <%= f.text_field :name, :class => "login"%>
   </div>
   
   <div>
@@ -30,5 +30,4 @@
   <div>
     <%= f.submit "Send" %>
   </div>
-</div>
-<% end %>
+  <% end %>
